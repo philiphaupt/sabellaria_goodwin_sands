@@ -18,11 +18,4 @@ plot(sab_mod_crop)
 sab_mod_goodwin <- mask(sab_mod_crop, goodwin_utm31_sf)
 plot(sab_mod_goodwin)
 
-# overlay sabellaria points
-sab <- sab_and_mussels %>% filter(name == "sab")
-st_coordinates(sab)
-points(st_coordinates(sab), cex = 0.5*log(as.numeric(sab$count)))
-summary(as.numeric(sab$count))
-median(as.numeric(sab$count))
-# ggplot(data = sab, aes(x = as.numeric(count), col = "red"))+
-#   geom_density()
+
