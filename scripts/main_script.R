@@ -23,7 +23,7 @@ samples_per_category <- 3 # number of areas that will be surveyed per n_grps
 
 # Replication within each area
 # Survey box parameters
-side_scan_area_length <- 1000 # length of survey box
+side_scan_area_length <- 500 # length of survey box
 side_scan_area_width <- 450 # width of the area surveyed
 min_area_separation <- 3000 # nb! readme: minimum distance between centres of sampled areas # nb - this can be undermined if the above is too large. Also can cause problems if not a round number, suggest multiples of 1000!
 
@@ -80,6 +80,15 @@ source("./scripts/plot_outcome.R", echo = TRUE)
 
 # 12. write to file
 source("./scripts/write_transect_line.R", echo = TRUE)
+
+# 13. after some manual movements of boxes - read boxes [manual] in, and recreate sampling lines wihtin.
+# 14. and redraw transect lines - probably easiest to manually move them - but you can run below then R will draw them inside th shifted boxes: Note that runnign the latter will overwrite files with the smae name!
+#NOT RUN file.edit("./scripts/create_sonar_transect_lines_inside_manual_boxes.R", echo = TRUE)
+# I added the habitat infom the the adjusted transect lines in QGIS using Join attributes by location function.
+# via a join with the tblEUNIS codes in the project.
+
+# 15. Read in the file and extract the vertices for start and end points
+
 
 # next survey design
 # sample points areas with 
