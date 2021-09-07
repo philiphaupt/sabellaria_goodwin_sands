@@ -108,3 +108,9 @@ source("./scripts/write_transect_line.R", echo = TRUE)
 # Side-scan sonar
 # multibeam sonar
 # Acoustic image (ARIS 1800 Explorer) currently with Ron Jessop - can we borrow it?
+
+
+
+###------------
+# Calculating GLCM Texture 
+source("./scripts/analysis_glcm.R")

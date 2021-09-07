@@ -50,6 +50,7 @@ output_pts_sf <- output_pts_sf %>%
 
 # 6) Make tansect lines from points: cast points to lines
 new_transect_lines_sf <- output_pts_sf %>%
+    filter(survey_block %in% "D") %>% 
         group_by(line_name) %>% # you can change teh grp number to the somethign like line_name from the attribute table to group the points by.
         summarise() %>%
         st_cast(to = "LINESTRING",
